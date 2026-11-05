@@ -288,3 +288,8 @@ It also provides a learning platform for exploring rule-based detection, API dev
 ## 15. Project Repository
 
 Repository: `https://github.com/Nanyondo-Sherinah-Spellah/phishing_email_checker.git`
+
+## 16. User guide
+
+To open the reports(pdfs) in the doc folder, install the vscode
+-pdf extension in your vscode
