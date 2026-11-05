@@ -102,11 +102,10 @@ Install the following:
 ### Clone the repository
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/Nanyondo-Sherinah-Spellah/phishing_email_checker.git
 cd phishing-email-checker
 ```
 
-Replace `<REPOSITORY_URL>` with the actual project repository address.
 
 ### Backend setup
 
@@ -288,4 +287,4 @@ It also provides a learning platform for exploring rule-based detection, API dev
 
 ## 15. Project Repository
 
-Repository: `<INSERT_PROJECT_REPOSITORY_URL>`
+Repository: `https://github.com/Nanyondo-Sherinah-Spellah/phishing_email_checker.git`
