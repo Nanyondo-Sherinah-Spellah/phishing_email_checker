@@ -1,0 +1,945 @@
+
+/* =========================================
+   PHISHING EMAIL CHECKER
+   Main dashboard styling
+   ========================================= */
+
+.app-container {
+  min-height: 100vh;
+  padding: 0;
+  background: #f7f8fd;
+  color: #101a38;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main dashboard shell */
+
+.dashboard-shell {
+  display: grid;
+  grid-template-columns: 252px minmax(0, 1fr);
+  min-height: 760px;
+  padding: 14px 12px 12px;
+  background: linear-gradient(135deg, #0c1932, #172748);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px 12px 20px;
+  color: #ffffff;
+  background: linear-gradient(160deg, #172947, #0c1934);
+  border: 1px solid rgba(123, 160, 219, 0.35);
+  border-radius: 14px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 124px;
+  margin-bottom: 8px;
+  color: #28baff;
+}
+
+.brand-logo > svg:first-child {
+  filter: drop-shadow(0 5px 8px rgba(0, 142, 255, 0.25));
+  stroke-width: 1.8;
+}
+
+.brand-mail {
+  position: absolute;
+  top: 41px;
+  left: 39px;
+  color: #ffffff;
+  fill: #ffffff;
+  stroke: #1675df;
+}
+
+.brand-check {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  color: #25d88c;
+  fill: #25d88c;
+  stroke: #25d88c;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.brand p {
+  margin: 8px 0 34px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 55px;
+  padding: 0 17px;
+  border: none;
+  border-radius: 12px;
+  color: #f3f6ff;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background: linear-gradient(110deg, #0877e8, #0874d8);
+  box-shadow: 0 5px 14px rgba(0, 102, 255, 0.22);
+}
+
+.sidebar-safety {
+  margin-top: auto;
+  padding: 19px 13px 21px;
+  border: 1px solid rgba(119, 157, 218, 0.35);
+  border-radius: 12px;
+}
+
+.safety-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.safety-heading svg {
+  flex-shrink: 0;
+  color: #28d994;
+  fill: #28d994;
+  stroke: #28d994;
+}
+
+.sidebar-safety p {
+  margin: 8px 0 0 45px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   MAIN AREA AND TOPBAR
+   ========================================= */
+
+.main-area {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #f7f7fc;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 20px;
+  background: linear-gradient(100deg, #1b2c4c, #243858);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.secure-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.secure-status svg {
+  color: #2bdf95;
+  fill: #2bdf95;
+  stroke: #075e40;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #ffffff;
+  background: #526a94;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mobile-menu-button {
+  display: none;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================================
+   WORKSPACE
+   ========================================= */
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.42fr);
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+  padding: 16px 18px 14px;
+  background: linear-gradient(110deg, #f6f7ff, #fffafa);
+}
+
+.email-column,
+.results-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.email-column {
+  gap: 3px;
+}
+
+.section-heading {
+  padding: 13px 20px 16px;
+  background: linear-gradient(120deg, #f2f4ff, #ffffff);
+  border: 1px solid #e6e9f8;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(38, 64, 124, 0.04);
+}
+
+.heading-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.heading-title svg {
+  flex-shrink: 0;
+  color: #0872d9;
+}
+
+.heading-title h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.section-heading p {
+  margin: 7px 0 0;
+  color: #25345d;
+  font-size: 16px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  padding: 18px 20px 8px;
+  background: #ffffff;
+  border: 1px solid #e5e8f5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(35, 57, 105, 0.04);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #101a38;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  color: #101a38;
+  background: #ffffff;
+  border: 1.5px solid #cbd2e8;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+  box-shadow: inset 0 1px 2px rgba(30, 50, 90, 0.03);
+}
+
+.form-group input {
+  height: 42px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #1675e8;
+  box-shadow: 0 0 0 3px rgba(22, 117, 232, 0.1);
+}
+
+.form-group textarea {
+  min-height: 160px;
+  resize: vertical;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.scan-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 171px;
+  min-height: 53px;
+  margin-top: 1px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #0757ed, #0868ed);
+  border: none;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scan-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(0, 85, 230, 0.25);
+}
+
+.scan-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* =========================================
+   RESULTS COLUMN
+   ========================================= */
+
+.results-column {
+  gap: 12px;
+}
+
+/* Risk summary */
+
+.risk-summary {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  min-height: 158px;
+  padding: 15px 20px;
+  background: linear-gradient(110deg, #ffe5e9, #ffedf0);
+  border: 1px solid #ffbdc8;
+  border-radius: 14px;
+}
+
+.risk-main-icon {
+  flex-shrink: 0;
+  color: #f01820;
+  fill: #f01820;
+  stroke: #ffffff;
+}
+
+.risk-message {
+  flex: 1;
+  min-width: 0;
+}
+
+.risk-message h2 {
+  margin: 0 0 12px;
+  color: #e31717;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.risk-message p {
+  margin: 0;
+  color: #101a38;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.risk-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 132px;
+}
+
+.score-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 126px;
+  height: 126px;
+  border: 12px solid #e11d25;
+  border-top-color: #ffb1b6;
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+.score-circle strong,
+.score-circle span {
+  transform: rotate(10deg);
+}
+
+.score-circle strong {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.score-circle span {
+  font-size: 16px;
+}
+
+/* Risk indicators */
+
+.indicators-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 8px 5px 5px;
+}
+
+.section-label svg {
+  color: #101a38;
+}
+
+.section-label h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.indicator-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 68px;
+  padding: 9px 19px;
+  background: linear-gradient(110deg, #fce2e7, #fce6ea);
+  border-radius: 14px;
+}
+
+.indicator-icon {
+  flex-shrink: 0;
+}
+
+.red-icon {
+  color: #ec1825;
+}
+
+.dark-icon {
+  color: #101a38;
+  fill: #101a38;
+}
+
+.indicator-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.indicator-content h3 {
+  margin: 0 0 5px;
+  color: #101a38;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.indicator-content p {
+  margin: 0;
+  color: #101a38;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.severity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 85px;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.severity.high {
+  background: #ec111b;
+}
+
+.severity.medium {
+  background: #ff8700;
+}
+
+/* Recommendation */
+
+.recommendation-card {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  min-height: 102px;
+  padding: 13px 20px;
+  background: linear-gradient(110deg, #e5edff, #e3ecff);
+  border: 1px solid #a9c8ff;
+  border-radius: 14px;
+}
+
+.recommendation-icon {
+  flex-shrink: 0;
+  color: #0872e5;
+}
+
+.recommendation-card h3 {
+  margin: 0 0 8px;
+  color: #101a38;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.recommendation-card p {
+  margin: 0;
+  color: #101a38;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* Analysis details */
+
+.analysis-details {
+  background: #ffffff;
+  border: 1px solid #dce2f2;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(33, 52, 97, 0.06);
+}
+
+.details-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 46px;
+  padding: 0 19px;
+  color: #101a38;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.details-content {
+  padding: 10px 19px 15px;
+  border-top: 1px solid #e6eaf4;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   HOW IT WORKS
+   ========================================= */
+
+.how-it-works {
+  padding: 10px 8px 22px;
+  background: linear-gradient(120deg, #f5f7ff, #ffffff);
+}
+
+.how-title {
+  display: inline-block;
+  min-width: 240px;
+  margin: 0 0 12px;
+  padding: 3px 18px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #142448, #263762);
+  border-radius: 12px;
+  font-size: 27px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.workflow-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 25px minmax(0, 1fr) 25px minmax(0, 1fr) 25px minmax(0, 1fr) minmax(240px, 1.35fr);
+  align-items: center;
+  gap: 5px;
+}
+
+.workflow-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 195px;
+  padding: 15px 8px 12px;
+  background: linear-gradient(145deg, #e6edff, #dce8ff);
+  border-radius: 19px;
+  text-align: center;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  margin-bottom: 5px;
+  color: #ffffff;
+  background: #1261cf;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.workflow-card h3 {
+  margin: 0 0 11px;
+  color: #063b8c;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.workflow-icon {
+  margin-bottom: 8px;
+  color: #1268cf;
+  fill: #1268cf;
+  stroke: #ffffff;
+}
+
+.workflow-icon.success-icon {
+  color: #19bd79;
+  fill: #19bd79;
+  stroke: #ffffff;
+}
+
+.workflow-card p {
+  margin: 0;
+  color: #101a38;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.workflow-arrow {
+  color: #084ac5;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Key features */
+
+.key-features {
+  min-height: 195px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #dff7ec, #d4f2e5);
+  border: 1px solid #48cf91;
+  border-radius: 20px;
+}
+
+.key-features h2 {
+  margin: 0 0 12px;
+  color: #101a38;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.key-features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.key-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #101a38;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.key-features li svg {
+  flex-shrink: 0;
+  width: 23px;
+  height: 23px;
+  color: #0e9560;
+  fill: #0e9560;
+  stroke: white;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .dashboard-shell {
+    grid-template-columns: 215px minmax(0, 1fr);
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .email-form {
+    gap: 13px;
+  }
+
+  .workflow-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .workflow-arrow {
+    display: none;
+  }
+
+  .key-features {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard-shell {
+    position: relative;
+    display: block;
+    min-height: auto;
+    padding: 7px;
+    border-radius: 12px;
+  }
+
+  .sidebar {
+    position: absolute;
+    z-index: 10;
+    top: 7px;
+    left: 7px;
+    bottom: 7px;
+    width: 245px;
+    min-height: 650px;
+    transform: translateX(-110%);
+    transition: transform 0.25s ease;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+
+  .main-area {
+    min-height: 650px;
+  }
+
+  .topbar {
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .topbar-right {
+    gap: 12px;
+  }
+
+  .workspace {
+    padding: 10px;
+  }
+
+  .heading-title h2 {
+    font-size: 21px;
+  }
+
+  .section-heading p {
+    font-size: 13px;
+  }
+
+  .email-form {
+    padding: 15px 12px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .risk-summary {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .risk-main-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .risk-message {
+    flex-basis: calc(100% - 75px);
+  }
+
+  .risk-message h2 {
+    font-size: 19px;
+  }
+
+  .risk-message p {
+    font-size: 13px;
+  }
+
+  .risk-score {
+    width: 100%;
+  }
+
+  .score-circle {
+    width: 90px;
+    height: 90px;
+    border-width: 9px;
+  }
+
+  .score-circle strong {
+    font-size: 25px;
+  }
+
+  .indicator-card {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .indicator-content h3 {
+    font-size: 14px;
+  }
+
+  .indicator-content p {
+    font-size: 12px;
+  }
+
+  .severity {
+    min-width: 55px;
+    padding: 7px;
+    font-size: 12px;
+  }
+
+  .recommendation-card {
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .recommendation-card p {
+    font-size: 13px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .workflow-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .key-features {
+    grid-column: auto;
+  }
+
+  .how-title {
+    min-width: 0;
+    font-size: 22px;
+  }
+}
+
+
+
+.api-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 12px 15px;
+  border: 1px solid #e8b6b6;
+  border-radius: 8px;
+  background: #fff1f1;
+  color: #a52a2a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.api-error svg {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   COMPACT DESKTOP VIEW
+   Fit dashboard on one screen
+   ========================================= */
+
+@media (min-width: 1101px) {
+  .dashboard-shell {
+    zoom: 0.82;
+  }
+}
