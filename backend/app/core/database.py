@@ -35,6 +35,7 @@ class Base(DeclarativeBase):
     pass
 
 
+
 # Provide a database session to FastAPI endpoints.
 def get_db():
     db = SessionLocal()
